@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/Result_TextView_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="計算結果"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Result_TextView_Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="身高："
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Result_TextView_Title"
+        app:layout_constraintStart_toStartOf="@+id/Result_TextView_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Result_TextView_Title" />
+
+    <TextView
+        android:id="@+id/Result_TextView_Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="體重："
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Result_TextView_Height"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Result_TextView_Height"
+        app:layout_constraintTop_toBottomOf="@+id/Result_TextView_Height" />
+
+    <TextView
+        android:id="@+id/Result_TextView_BMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="BMI："
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Result_TextView_Weight"
+        app:layout_constraintStart_toStartOf="@+id/Result_TextView_Weight"
+        app:layout_constraintTop_toBottomOf="@+id/Result_TextView_Weight" />
+</androidx.constraintlayout.widget.ConstraintLayout>

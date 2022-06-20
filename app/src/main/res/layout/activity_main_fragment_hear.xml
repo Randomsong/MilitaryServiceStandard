@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/Hear_TextView_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="聽力"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Hear_TextView_Rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="分別輸入雙耳的純音聽力檢查閾值"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Hear_TextView_Title"
+        app:layout_constraintStart_toStartOf="@+id/Hear_TextView_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Hear_TextView_Title" />
+
+    <LinearLayout
+        android:id="@+id/Hear_LinearLayout_LeftEar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/Hear_LinearLayout_RightEar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Hear_TextView_Rule">
+
+        <TextView
+            android:id="@+id/Hear_TextView_LeftEar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="左耳"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/Hear_EditText_LeftEar"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="請輸入閾值"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Hear_LinearLayout_RightEar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Hear_LinearLayout_LeftEar"
+        app:layout_constraintTop_toTopOf="@+id/Hear_LinearLayout_LeftEar">
+
+        <TextView
+            android:id="@+id/Hear_TextView_RightEar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="右耳"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/Hear_EditText_RightEar"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="請輸入閾值"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Hear_Button_Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="計算"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/Hear_Button_Clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Hear_LinearLayout_RightEar" />
+
+    <Button
+        android:id="@+id/Hear_Button_Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除資料"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Hear_Button_Check"
+        app:layout_constraintTop_toTopOf="@+id/Hear_Button_Check" />
+
+    <TextView
+        android:id="@+id/Hear_TextView_ResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="依據法規標準，你的兵役為："
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Hear_Button_Clear"
+        app:layout_constraintStart_toStartOf="@+id/Hear_Button_Check"
+        app:layout_constraintTop_toBottomOf="@+id/Hear_Button_Check" />
+
+    <TextView
+        android:id="@+id/Hear_TextView_Result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="尚未計算"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Hear_TextView_ResultTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

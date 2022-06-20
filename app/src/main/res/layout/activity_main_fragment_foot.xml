@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Foot_TextView_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="畸形足"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Foot_TextView_Rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="選擇畸形足類型並輸入角度"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Foot_TextView_Title"
+        app:layout_constraintStart_toStartOf="@+id/Foot_TextView_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Foot_TextView_Title" />
+
+    <RadioGroup
+        android:id="@+id/Foot_RadioGroup_Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/Foot_TextView_Rule"
+        app:layout_constraintStart_toStartOf="@+id/Foot_TextView_Rule"
+        app:layout_constraintTop_toBottomOf="@+id/Foot_TextView_Rule">
+
+        <RadioButton
+            android:id="@+id/Foot_RadioButton_Flat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="扁平足"
+            android:textSize="18sp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/Foot_RadioButton_Hollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="空凹足"
+            android:textSize="18sp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/Foot_LinearLayout_Angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/Foot_RadioGroup_Type"
+        app:layout_constraintStart_toStartOf="@+id/Foot_RadioGroup_Type"
+        app:layout_constraintTop_toBottomOf="@+id/Foot_RadioGroup_Type">
+
+        <TextView
+            android:id="@+id/Foot_TextView_Angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="角度"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/Foot_EditText_Angle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="請輸入角度"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Foot_Button_Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="計算"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/Foot_Button_Clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Foot_LinearLayout_Angle" />
+
+    <Button
+        android:id="@+id/Foot_Button_Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除資料"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Foot_Button_Check"
+        app:layout_constraintTop_toTopOf="@+id/Foot_Button_Check" />
+
+    <TextView
+        android:id="@+id/Foot_TextView_ResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="依據法規標準，你的兵役為："
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Foot_Button_Clear"
+        app:layout_constraintStart_toStartOf="@+id/Foot_Button_Check"
+        app:layout_constraintTop_toBottomOf="@+id/Foot_Button_Check" />
+
+    <TextView
+        android:id="@+id/Foot_TextView_Result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="尚未計算"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Foot_TextView_ResultTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

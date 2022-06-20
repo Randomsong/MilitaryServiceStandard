@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/BMI_TextView_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="BMI"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BMI_TextView_Rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="輸入身高與體重"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/BMI_TextView_Title"
+        app:layout_constraintStart_toStartOf="@+id/BMI_TextView_Title"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_TextView_Title" />
+
+    <LinearLayout
+        android:id="@+id/BMI_LinearLayout_Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/BMI_TextView_Rule"
+        app:layout_constraintEnd_toEndOf="@id/BMI_TextView_Rule"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_TextView_Rule">
+
+        <TextView
+            android:id="@+id/BMI_TextView_Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身高(cm)："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/BMI_EditTextNumber_Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="請輸入身高"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BMI_LinearLayout_Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/BMI_LinearLayout_Height"
+        app:layout_constraintStart_toStartOf="@+id/BMI_LinearLayout_Height"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_LinearLayout_Height">
+
+        <TextView
+            android:id="@+id/BMI_TextView_Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="體重(kg)："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/BMI_EditTextNumber_Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="請輸入體重"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BMI_Button_Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="計算"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/BMI_Button_Clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_LinearLayout_Weight" />
+
+    <Button
+        android:id="@+id/BMI_Button_Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除資料"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/BMI_Button_Check"
+        app:layout_constraintTop_toTopOf="@+id/BMI_Button_Check" />
+
+    <TextView
+        android:id="@+id/BMI_TextView_BMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="請點選計算來取得BMI"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/BMI_Button_Clear"
+        app:layout_constraintStart_toStartOf="@+id/BMI_Button_Check"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_Button_Check" />
+
+    <TextView
+        android:id="@+id/BMI_TextView_ResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="依據法規標準，你的兵役為："
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/BMI_TextView_BMI"
+        app:layout_constraintStart_toStartOf="@+id/BMI_TextView_BMI"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_TextView_BMI" />
+
+    <TextView
+        android:id="@+id/BMI_TextView_Result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="尚未計算"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_TextView_ResultTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
